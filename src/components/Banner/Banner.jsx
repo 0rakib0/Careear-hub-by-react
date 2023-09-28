@@ -1,7 +1,7 @@
 
 const Banner = () => {
     return (
-        <div className="text-center mb-8">
+        <div className="text-center mb-12">
             <div className="flex justify-center items-center">
                 <div>
                     <h4 className="text-6xl font-bold text-start my-4">One Step Closer To Your <span className="text-[#7E90FE]">Dream Job</span></h4>
