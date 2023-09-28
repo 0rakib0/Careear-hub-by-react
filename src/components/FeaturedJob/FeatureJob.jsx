@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
 import { BiCurrentLocation, BiDollarCircle } from "react-icons/bi";
+import { Link } from 'react-router-dom';
 
 const FeatureJob = ({ job }) => {
-    const { logo, job_title, company_name, remote_or_onsite, location, job_type, salary } = job
+    const {id, logo, job_title, company_name, remote_or_onsite, location, job_type, salary } = job
     return (
-        <div className="card card-compact bg-base-100 shadow-xl p-2 m-2">
+        <div className="card card-compact bg-base-100 shadow-xl p-2 m-2 border-2 border-[#7E90FE]">
             <img src={logo} width='200px' className='rounded-lg ml-3 mt-3' alt="Shoes" />
             <div className="card-body">
                 <h2 className="card-title font-extrabold">{job_title}</h2>
@@ -24,7 +25,7 @@ const FeatureJob = ({ job }) => {
                     </div>
                 </div>
                 <div className="card-actions">
-                    <button className="btn btn-primary">View Details</button>
+                    <Link to={`/jobs-details/${id}`}><button className="btn btn-primary">View Details</button></Link>
                 </div>
             </div>
         </div>
